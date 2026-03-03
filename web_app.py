@@ -95,7 +95,7 @@ st.markdown("""
 # --- LOAD AI MODELS ---
 @st.cache_resource
 def load_ai_models():
-    model = tf.keras.models.load_model('best_isl_model.keras')
+    model = keras.models.load_model('best_isl_model.keras', compile=False)
     actions = np.load('actions.npy')
     translator = SmartTranslator()
     return model, actions, translator
@@ -204,5 +204,6 @@ if ctx.video_processor:
                     else:
 
                         st.markdown(f'<div class="error-card">⚠️ Sign not recognized clearly ({confidence*100:.1f}%). Please try again.</div>', unsafe_allow_html=True)
+
 
 
