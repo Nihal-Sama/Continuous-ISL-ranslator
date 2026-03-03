@@ -6,8 +6,8 @@ from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, WebRtcMode, 
 import av
 import streamlit.components.v1 as components
 
-from src.utils import extract_landmarks, draw_styled_landmarks, mediapipe_detection, mp_holistic
-from src.translator import SmartTranslator
+from utils import extract_landmarks, draw_styled_landmarks, mediapipe_detection, mp_holistic
+from translator import SmartTranslator
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(page_title="Continuous-SignTranslator", page_icon="🌐", layout="centered")
@@ -201,4 +201,5 @@ if ctx.video_processor:
                         st.markdown(html_card, unsafe_allow_html=True)
                         speak_on_mobile(final_text)
                     else:
+
                         st.markdown(f'<div class="error-card">⚠️ Sign not recognized clearly ({confidence*100:.1f}%). Please try again.</div>', unsafe_allow_html=True)
