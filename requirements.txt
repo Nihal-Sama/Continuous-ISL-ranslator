@@ -1,7 +1,7 @@
 streamlit
 streamlit-webrtc
-opencv-python-headless
-mediapipe
-tensorflow-cpu
+opencv-python-headless==4.8.0.76
+mediapipe==0.10.9
+tensorflow-cpu==2.15.0
 transformers
 scikit-learn
