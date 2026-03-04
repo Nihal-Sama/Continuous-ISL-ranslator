@@ -5,3 +5,4 @@ keras==3.12.1
 opencv-python-headless==4.8.0.76
 mediapipe==0.10.9
 numpy
+transformers==4.41.2
