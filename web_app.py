@@ -100,7 +100,7 @@ def load_ai_models():
     translator = SmartTranslator()
     return model, actions, translator
 
-model, actions, translator = load_ai_models()
+    model, actions, translator = load_ai_models()
 
 # --- TTS JAVASCRIPT ---
 def speak_on_mobile(text):
@@ -204,6 +204,7 @@ if ctx.video_processor:
                     else:
 
                         st.markdown(f'<div class="error-card">⚠️ Sign not recognized clearly ({confidence*100:.1f}%). Please try again.</div>', unsafe_allow_html=True)
+
 
 
 
